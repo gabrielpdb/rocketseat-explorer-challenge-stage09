@@ -19,7 +19,7 @@ export default createGlobalStyle`
     color: ${({ theme }) => theme.COLORS.WHITE};
   }
 
-  input {
+  input, button {
     border: none;
   }
 

@@ -2,16 +2,18 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   width: 100%;
+  height: 100vh;
 
   > .content {
-    padding: 5rem 12.3rem;
+    height: 85%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+
+    padding: 5rem 12.3rem;
+
     gap: 2.4rem;
 
     > .header {
-      width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -21,6 +23,14 @@ export const Container = styled.div`
         font-size: 3.2rem;
         font-weight: 400;
       }
+    }
+
+    > .movies {
+      max-height: 85%;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
     }
   }
 `

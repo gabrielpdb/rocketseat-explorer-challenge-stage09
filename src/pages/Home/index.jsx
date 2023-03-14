@@ -1,6 +1,8 @@
 import { Container } from './styles'
 import { Header } from '../../components/Header'
 import { MovieNote } from '../../components/MovieNote'
+import { Button } from '../../components/Button'
+import { FiPlus } from 'react-icons/fi'
 
 export function Home() {
   return (
@@ -10,11 +12,13 @@ export function Home() {
       <div className="content">
         <div className="header">
           <h2>Meus filmes</h2>
-          <button>Adicionar filme</button>
+          <Button title="Adicionar filme" icon={FiPlus} />
         </div>
-        <MovieNote />
-        <MovieNote />
-        <MovieNote />
+        <div className="movies">
+          <MovieNote />
+          <MovieNote />
+          <MovieNote />
+        </div>
       </div>
     </Container>
   )
