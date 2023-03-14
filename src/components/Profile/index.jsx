@@ -6,7 +6,7 @@ export function Profile() {
     <Container>
       <div>
         <span>Gabriel Dal Bó</span>
-        <a href="#">sair</a>
+        <Link to={'/profile'}>sair</Link>
       </div>
       <img src="https://github.com/gabrielpdb.png" alt="Imagem de Gabriel" />
     </Container>
