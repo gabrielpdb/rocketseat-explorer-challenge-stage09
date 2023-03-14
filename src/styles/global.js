@@ -19,6 +19,10 @@ export default createGlobalStyle`
     color: ${({ theme }) => theme.COLORS.WHITE};
   }
 
+  input {
+    border: none;
+  }
+
   a {
     text-decoration: none;
   }
