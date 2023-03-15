@@ -7,13 +7,13 @@ export const Container = styled.div`
   text-decoration: none;
 
   > div {
-    min-width: 12.5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     font-size: 1.4rem;
 
     span {
+      white-space: nowrap;
       font-weight: 700;
       color: ${({ theme }) => theme.COLORS.WHITE};
     }

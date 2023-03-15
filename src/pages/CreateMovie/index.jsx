@@ -7,6 +7,7 @@ import { Input } from '../../components/Input'
 import { Textarea } from '../../components/Textarea'
 import { Section } from '../../components/Section'
 import { Button } from '../../components/Button'
+import { Tag } from '../../components/Tag'
 
 export function CreateMovie() {
   return (
@@ -27,7 +28,10 @@ export function CreateMovie() {
 
           <Textarea placeholder="Observações" />
 
-          <Section title={'Marcadores'}></Section>
+          <Section title={'Marcadores'}>
+            <Tag title={'React'} />
+            <Tag isNew />
+          </Section>
 
           <div className="buttons">
             <Button title={'Excluir filme'} disabled />
