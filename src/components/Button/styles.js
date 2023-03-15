@@ -2,9 +2,11 @@ import styled from 'styled-components'
 
 export const Container = styled.button`
   padding: 1.35rem 3.2rem;
-  background: ${({ theme }) => theme.COLORS.RED};
+  background: ${({ theme, disabled }) =>
+    disabled ? theme.COLORS.BACKGROUND_900 : theme.COLORS.RED};
 
-  color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+  color: ${({ theme, disabled }) =>
+    disabled ? theme.COLORS.RED : theme.COLORS.BACKGROUND_900};
   font-size: 1.6rem;
   font-weight: 400;
 

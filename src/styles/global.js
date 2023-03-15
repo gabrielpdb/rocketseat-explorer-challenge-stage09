@@ -19,7 +19,8 @@ export default createGlobalStyle`
     color: ${({ theme }) => theme.COLORS.WHITE};
   }
 
-  input, button {
+  input, button, textarea {
+    font-family: 'Roboto Slab', serif;
     border: none;
   }
 
