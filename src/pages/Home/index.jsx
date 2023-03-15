@@ -1,4 +1,4 @@
-import { Container } from './styles'
+import { Container, NewMovie } from './styles'
 import { Header } from '../../components/Header'
 import { MovieNote } from '../../components/MovieNote'
 import { Button } from '../../components/Button'
@@ -12,7 +12,10 @@ export function Home() {
       <div className="content">
         <div className="header">
           <h2>Meus filmes</h2>
-          <Button title="Adicionar filme" icon={FiPlus} />
+          <NewMovie to="/create">
+            <FiPlus />
+            Adicionar filme
+          </NewMovie>
         </div>
         <div className="movies">
           <MovieNote />

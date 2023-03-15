@@ -4,6 +4,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   gap: 0.9rem;
+  text-decoration: none;
 
   > div {
     min-width: 12.5rem;
@@ -14,6 +15,7 @@ export const Container = styled.div`
 
     span {
       font-weight: 700;
+      color: ${({ theme }) => theme.COLORS.WHITE};
     }
 
     a {
@@ -22,7 +24,7 @@ export const Container = styled.div`
     }
   }
 
-  > img {
+  img {
     width: 6.4rem;
     height: 6.4rem;
     border-radius: 50%;

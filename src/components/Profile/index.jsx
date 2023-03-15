@@ -6,9 +6,11 @@ export function Profile() {
     <Container>
       <div>
         <span>Gabriel Dal Bó</span>
-        <Link to={'/profile'}>sair</Link>
+        <Link to={'/signin'}>sair</Link>
       </div>
-      <img src="https://github.com/gabrielpdb.png" alt="Imagem de Gabriel" />
+      <Link to={'/profile'}>
+        <img src="https://github.com/gabrielpdb.png" alt="Imagem de Gabriel" />
+      </Link>
     </Container>
   )
 }
