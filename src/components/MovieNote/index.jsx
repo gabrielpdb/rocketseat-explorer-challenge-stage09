@@ -4,9 +4,9 @@ import { Container } from './styles'
 import { TagList } from '../TagList'
 import { ViewTag } from '../ViewTag'
 
-export function MovieNote() {
+export function MovieNote({ to }) {
   return (
-    <Container>
+    <Container to={to}>
       <h3>Interestellar</h3>
       <div className="stars">
         <FiStar />

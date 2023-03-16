@@ -1,10 +1,13 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-export const Container = styled.div`
+export const Container = styled(Link)`
   width: 100%;
   background: ${({ theme }) => theme.COLORS.BACKGROUND_HIGHLIGHT};
   padding: 3.2rem;
   border-radius: 1.6rem;
+  text-decoration: none;
+  color: ${({ theme }) => theme.COLORS.WHITE};
 
   > h3 {
     font-size: 2.4rem;
@@ -14,6 +17,10 @@ export const Container = styled.div`
 
   > .stars {
     margin-bottom: 1.5rem;
+
+    svg {
+      color: ${({ theme }) => theme.COLORS.RED};
+    }
   }
 
   > p {

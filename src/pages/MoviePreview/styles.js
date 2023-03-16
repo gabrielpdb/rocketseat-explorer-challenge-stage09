@@ -5,12 +5,15 @@ export const Container = styled.div`
   height: 100vh;
 
   > .content {
+    height: 85%;
     display: flex;
     flex-direction: column;
 
     padding: 5rem 12.3rem;
 
     gap: 2.4rem;
+
+    overflow-y: auto;
 
     > .header {
       display: flex;
