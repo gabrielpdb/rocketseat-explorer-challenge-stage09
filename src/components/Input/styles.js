@@ -18,13 +18,12 @@ export const Container = styled.div`
     color: ${({ theme }) => theme.COLORS.GRAY_100};
     font-size: 1.4rem;
     font-weight: 400;
+
+    outline: none;
   }
 
   > svg {
     margin-left: 1.6rem;
-  }
-
-  > svg fill {
     color: ${({ theme }) => theme.COLORS.GRAY_100};
   }
 `
