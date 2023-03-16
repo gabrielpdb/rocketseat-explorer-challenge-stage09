@@ -1,6 +1,9 @@
 import { FiStar } from 'react-icons/fi'
 import { Container } from './styles'
 
+import { TagList } from '../TagList'
+import { ViewTag } from '../ViewTag'
+
 export function MovieNote() {
   return (
     <Container>
@@ -20,11 +23,11 @@ export function MovieNote() {
         tenta se...
       </p>
 
-      <div className="tags">
-        <span>Ficção científica</span>
-        <span>Drama</span>
-        <span>Família</span>
-      </div>
+      <TagList>
+        <ViewTag title={'Ficção Científica'} />
+        <ViewTag title={'Drama'} />
+        <ViewTag title={'Família'} />
+      </TagList>
     </Container>
   )
 }

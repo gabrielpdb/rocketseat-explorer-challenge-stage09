@@ -23,19 +23,4 @@ export const Container = styled.div`
     color: ${({ theme }) => theme.COLORS.GRAY_200};
     margin-bottom: 1.5rem;
   }
-
-  > .tags {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 0.8rem;
-
-    > span {
-      font-size: 1.2rem;
-      font-weight: 400;
-      padding: 0.5rem 1.6rem;
-      background: ${({ theme }) => theme.COLORS.GRAY_300};
-      border-radius: 0.8rem;
-    }
-  }
 `
