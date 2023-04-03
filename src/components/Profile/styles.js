@@ -18,7 +18,8 @@ export const Container = styled.div`
       color: ${({ theme }) => theme.COLORS.WHITE};
     }
 
-    a {
+    button {
+      background: transparent;
       font-weight: 400;
       color: ${({ theme }) => theme.COLORS.GRAY_100};
     }
