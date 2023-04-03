@@ -22,7 +22,7 @@ export function SignUp() {
     try {
       await api.post('/users', { name, email, password })
       alert('Usuário cadastrado com sucesso!')
-      navigate('/signin')
+      navigate('/')
     } catch (error) {
       if (error.response) {
         alert(error.response.data.message)
@@ -60,11 +60,7 @@ export function SignUp() {
         />
 
         <Button title={'Cadastrar'} onClick={handleSignUp} />
-        <ButtonText
-          title={'Voltar para o login'}
-          to="/signin"
-          icon={FiArrowLeft}
-        />
+        <ButtonText title={'Voltar para o login'} to="/" icon={FiArrowLeft} />
       </Form>
 
       <Background />
