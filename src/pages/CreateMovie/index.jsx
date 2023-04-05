@@ -10,6 +10,8 @@ import { Button } from '../../components/Button'
 import { Tag } from '../../components/Tag'
 import { useState } from 'react'
 import { TagInput } from '../../components/TagInput'
+import { api } from '../../services/api'
+import { useNavigate } from 'react-router-dom'
 
 export function CreateMovie() {
   const [title, setTitle] = useState('')
@@ -18,6 +20,8 @@ export function CreateMovie() {
   const [newTag, setNewTag] = useState('')
   const [tags, setTags] = useState([])
 
+  const navigate = useNavigate()
+
   function handleAddNewTag() {
     setTags(prevState => [...prevState, newTag])
     setNewTag('')
@@ -25,6 +29,19 @@ export function CreateMovie() {
 
   function handleRemoveTag(deleted) {
     setTags(prevState => prevState.filter(tag => tag !== deleted))
+  }
+
+  async function handleNewNote() {
+    api.post('/notes', {
+      title,
+      description: obs,
+      rating,
+      tags
+    })
+
+    alert('Nota criada com sucesso!')
+
+    navigate(-1)
   }
 
   return (
@@ -47,6 +64,8 @@ export function CreateMovie() {
             <Input
               placeholder="Sua nota (de  0 a 5)"
               type="number"
+              min="0"
+              max="5"
               onChange={e => setRating(e.target.value)}
             />
           </div>
@@ -75,7 +94,7 @@ export function CreateMovie() {
 
           <div className="buttons">
             <Button title={'Excluir filme'} disabled />
-            <Button title={'Salvar alterações'} />
+            <Button title={'Salvar alterações'} onClick={handleNewNote} />
           </div>
         </Form>
       </div>
