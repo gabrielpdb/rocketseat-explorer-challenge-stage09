@@ -4,29 +4,22 @@ import { Container } from './styles'
 import { TagList } from '../TagList'
 import { ViewTag } from '../ViewTag'
 
-export function MovieNote({ to }) {
+export function MovieNote({ to, title, rating, description, tags }) {
+  const stars = []
+
+  for (let index = rating; index > 0; index--) {
+    stars.push(<FiStar key={index} />)
+  }
+
   return (
     <Container to={to}>
-      <h3>Interestellar</h3>
-      <div className="stars">
-        <FiStar />
-        <FiStar />
-        <FiStar />
-        <FiStar />
-        <FiStar />
-      </div>
-      <p>
-        Pragas nas colheitas fizeram a civilização humana regredir para uma
-        sociedade agrátia em futuro de data desconhecida. Cooper, ex piloto da
-        NASA, tem uma fazendo com sua família. Murphy, a filha de dez anos de
-        Cooper, acredita que seu quarto está assombrado por um fantasma que
-        tenta se...
-      </p>
+      <h3>{title}</h3>
+      <div className="stars">{stars.map(star => star)}</div>
+      <p>{description}</p>
 
       <TagList>
-        <ViewTag title={'Ficção Científica'} />
-        <ViewTag title={'Drama'} />
-        <ViewTag title={'Família'} />
+        {tags &&
+          tags.map((tag, index) => <ViewTag title={tag.name} key={index} />)}
       </TagList>
     </Container>
   )
