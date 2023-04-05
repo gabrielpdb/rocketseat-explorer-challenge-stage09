@@ -15,7 +15,7 @@ import { useNavigate } from 'react-router-dom'
 
 export function CreateMovie() {
   const [title, setTitle] = useState('')
-  const [rating, setRating] = useState(0)
+  const [rating, setRating] = useState()
   const [obs, setObs] = useState('')
   const [newTag, setNewTag] = useState('')
   const [tags, setTags] = useState([])
@@ -32,6 +32,23 @@ export function CreateMovie() {
   }
 
   async function handleNewNote() {
+    if (!title) {
+      return alert('Digite o título da nota!')
+    }
+
+    if (!rating) {
+      console.log(rating)
+      return alert('Informe a nota do filme')
+    }
+
+    if (!obs) {
+      return alert('Digite as observações sobre o filme!')
+    }
+
+    if (newTag) {
+      return alert('Adicione o marcador que ficou sobrando no campo')
+    }
+
     api.post('/notes', {
       title,
       description: obs,
