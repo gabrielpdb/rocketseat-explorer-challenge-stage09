@@ -17,8 +17,6 @@ export function Home() {
     }
 
     fetchNotes()
-
-    console.log(notes)
   }, [search])
   return (
     <Container>

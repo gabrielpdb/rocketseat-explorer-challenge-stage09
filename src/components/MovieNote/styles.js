@@ -17,10 +17,8 @@ export const Container = styled(Link)`
 
   > .stars {
     margin-bottom: 1.5rem;
-
-    svg {
-      color: ${({ theme }) => theme.COLORS.RED};
-    }
+    display: flex;
+    gap: 0.5rem;
   }
 
   > p {
