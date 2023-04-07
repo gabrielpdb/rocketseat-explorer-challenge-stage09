@@ -12,7 +12,7 @@ export function Profile() {
   return (
     <Container>
       <div>
-        <span>Gabriel Dal Bó</span>
+        <span>{user.name}</span>
         <button onClick={signOut}>sair</button>
       </div>
       <Link to={'/profile'}>

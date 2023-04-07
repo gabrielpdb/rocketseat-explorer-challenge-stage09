@@ -55,7 +55,7 @@ export function MoviePreview() {
                   src="https://github.com/gabrielpdb.png"
                   alt="Imagem de Gabriel"
                 />
-                Por Gabriel Dal Bó
+                Por {data.user_name}
               </div>
               <div className="created_at">
                 <FiClock />
