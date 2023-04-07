@@ -1,22 +1,15 @@
-import { FiStar } from 'react-icons/fi'
 import { Container } from './styles'
 
 import { TagList } from '../TagList'
 import { ViewTag } from '../ViewTag'
-import { Star } from '../Star'
+import { Stars } from '../Stars'
 
-export function MovieNote({ to, title, rating, description, tags }) {
-  const stars = []
-  for (let index = 1; index <= 5; index++) {
-    let fill = index <= rating
-    stars.push(<Star check={fill} key={index} />)
-  }
-  console.log()
-
+export function MovieNote({ title, rating, description, tags, ...rest }) {
   return (
-    <Container to={to}>
+    <Container {...rest}>
       <h3>{title}</h3>
-      <div className="stars">{stars.map(star => star)}</div>
+
+      <Stars gap={0.5} rating={rating} size={10} />
       <p>{description}</p>
 
       <TagList>
